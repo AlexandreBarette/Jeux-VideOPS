@@ -11,20 +11,20 @@ app.get('/', (req, res) => {
 
 app.get('/add', (req, res) => {
   res.send(`${req.query.a} + ${req.query.b} = ${calc.add(
-    parseFloat(req.query.a),
-    parseFloat(req.query.b))}`);
+      parseFloat(req.query.a),
+      parseFloat(req.query.b))}`);
 });
 
 app.get('/sub', (req, res) => {
   res.send(`${req.query.a} - ${req.query.b} = ${calc.subtract(
-    parseFloat(req.query.a),
-    parseFloat(req.query.b))}`);
+      parseFloat(req.query.a),
+      parseFloat(req.query.b))}`);
 });
 
 app.get('/mul', (req, res) => {
   res.send(`${req.query.a} * ${req.query.b} = ${calc.multiply(
-    parseFloat(req.query.a),
-    parseFloat(req.query.b))}`);
+      parseFloat(req.query.a),
+      parseFloat(req.query.b))}`);
 });
 
 app.get('/div', (req, res) => {
