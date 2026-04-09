@@ -1,0 +1,1 @@
+{"processes":{"3eef381e-8baa-4f09-a3b5-3bc9f9f8f291":{"parent":null,"children":["f34ac284-4a08-4867-8032-8a8da8621421"]},"f34ac284-4a08-4867-8032-8a8da8621421":{"parent":"3eef381e-8baa-4f09-a3b5-3bc9f9f8f291","children":[]}},"files":{"/home/abarette/Epitech/Jeux-VideOPS/bootstrap-app/bootstrap/modules/calculator.js":["f34ac284-4a08-4867-8032-8a8da8621421"]},"externalIds":{}}
