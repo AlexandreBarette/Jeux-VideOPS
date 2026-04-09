@@ -3,10 +3,15 @@ name: CI Workflow
 on:
   push:
     branches: [main]
+  workflow_dispatch:
 
 jobs:
   demo_job:
     runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: bootstrap-app/bootstrap
 
     steps:
       - name: Checkout repository
@@ -18,9 +23,19 @@ jobs:
           node-version: 24
 
       - name: Install dependencies
-        run: npm install
-        working-directory: bootstrap-app/bootstrap
+        run: npm ci
 
-      - name: Run tests
+      - name: Lint code
+        run: npm run eslint:check
+
+      - name: Run unit tests
         run: npm test
-        working-directory: bootstrap-app/bootstrap
+
+      - name: Run coverage
+        run: npm run nyc:run
+
+      - name: Run functional tests
+        run: npm run cypress:test
+
+      - name: Generate documentation
+        run: npm run jsdoc
